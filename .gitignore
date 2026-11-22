@@ -1,0 +1,89 @@
+# python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# jupyter
+.ipynb_checkpoints/
+
+# environment variables
+.env
+.env.*
+!.env.example
+
+# model training outputs
+checkpoints/
+runs/
+outputs/
+lightning_logs/
+wandb/
+mlruns/
+tensorboard/
+*.ckpt
+*.safetensors
+*.pt
+*.pth
+*.onnx
+
+# datasets and generated artifacts
+data/
+datasets/
+artifacts/
+*.parquet
+*.h5
+*.hdf5
+
+# ml caches
+.cache/
+huggingface_cache/
+.triton/
+
+# macos
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100/
+.Trashes/
+.fseventsd/
+.VolumeIcon.icns
+
+# linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*/
+
+# windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# editors
+.idea/
+.vscode/
+.spyderproject/
+.spyproject/
+.ropeproject/
+*.sublime-workspace
+*.sublime-project
+*.code-workspace
+*.swp
+*.swo
