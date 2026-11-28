@@ -5,9 +5,9 @@ from dataclasses import dataclass
 from functools import cached_property, lru_cache
 from pathlib import Path
 
-from assessment.alignment import Alignment, load_alignment
-from assessment.io import read_csv
-from assessment.midi import MidiFile, read_midi
+from assessment.performance.alignment import Alignment, load_alignment
+from assessment.common.io import read_csv
+from assessment.common.midi import MidiFile, read_midi
 
 
 @lru_cache(maxsize=64)

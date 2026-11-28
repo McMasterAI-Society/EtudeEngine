@@ -75,7 +75,6 @@ DYNAMICS_WINDOW_BEATS = 2.0          # loudness compared per 2 score beats
 DYNAMICS_MIN_NOTES = 20              # fewer evaluable notes -> velocity_range blank
 DYNAMICS_MIN_WINDOWS = 4             # fewer windows in a run -> run skipped
 VELOCITY_RANGE_PERCENTILES = (0.05, 0.95)
-MIDI_DEFAULT_US_PER_QUARTER = 500_000  # 120 bpm when a file has no tempo event
 
 # --- Validity: when a feature is blanked --------------------------------------
 MIN_SELECTED_MATCHES = 10

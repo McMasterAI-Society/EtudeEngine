@@ -5,7 +5,7 @@ import bisect
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from assessment.config import config as cfg
+MIDI_DEFAULT_US_PER_QUARTER = 500_000  # 120 bpm when a file has no tempo event
 
 
 @dataclass(frozen=True)
@@ -42,7 +42,7 @@ def _tick_converter(tempos, division):
     """Return a function mapping ticks to seconds under the file's tempo map."""
     tempos = sorted(tempos)
     if not tempos or tempos[0][0] != 0:
-        tempos.insert(0, (0, cfg.MIDI_DEFAULT_US_PER_QUARTER))
+        tempos.insert(0, (0, MIDI_DEFAULT_US_PER_QUARTER))
     marks, seconds = [], 0.0
     for i, (t, us) in enumerate(tempos):
         if i:

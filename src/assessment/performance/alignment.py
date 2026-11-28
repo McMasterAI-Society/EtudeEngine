@@ -5,8 +5,8 @@ import json
 from dataclasses import dataclass
 from pathlib import Path
 
-from assessment.io import read_csv
-from assessment.utils import number
+from assessment.common.io import read_csv
+from assessment.common.utils import number
 
 ROW_FIELDS = (
     'label', 'score_note_id', 'performance_note_id', 'score_pitch',

@@ -3,10 +3,10 @@ from __future__ import annotations
 
 import bisect
 
-from assessment.config import config as cfg
-from assessment.features.timing import make_anchors, project_beat_with_tempo
-from assessment.structure import count_performance_notes_in_windows, in_windows
-from assessment.utils import number
+from assessment.performance import config as cfg
+from assessment.performance.features.timing import make_anchors, project_beat_with_tempo
+from assessment.performance.structure import count_performance_notes_in_windows, in_windows
+from assessment.common.utils import number
 
 
 def substitution_candidates(runs, scores, selected_rows, *, tolerance_sec=cfg.SUBSTITUTION_MAX_SEC,

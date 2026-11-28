@@ -4,8 +4,8 @@ from __future__ import annotations
 import statistics
 from collections import defaultdict
 
-from assessment.config import config as cfg
-from assessment.utils import median, number
+from assessment.performance import config as cfg
+from assessment.common.utils import median, number
 
 
 def classify_chord_event(notes, spread_ms, *, roll_min_spread=cfg.ROLL_MIN_SPREAD_MS,

@@ -6,8 +6,8 @@ import math
 import statistics
 from collections import defaultdict
 
-from assessment.config import config as cfg
-from assessment.utils import median, number
+from assessment.performance import config as cfg
+from assessment.common.utils import median, number
 
 
 def _plausible_tempo(sec_per_beat):

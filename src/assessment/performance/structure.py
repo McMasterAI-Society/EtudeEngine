@@ -6,8 +6,8 @@ import statistics
 from collections import defaultdict
 from dataclasses import dataclass
 
-from assessment.config import config as cfg
-from assessment.utils import number
+from assessment.performance import config as cfg
+from assessment.common.utils import number
 
 
 @dataclass

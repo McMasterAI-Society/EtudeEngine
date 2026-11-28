@@ -1,7 +1,7 @@
 """Quality flags per performance, and whether each feature is trustworthy enough to report."""
 from __future__ import annotations
 
-from assessment.config import config as cfg
+from assessment.performance import config as cfg
 
 
 def build_state(*, alignment, structure, pitch_counts, raw, conflicts, selected_issues,

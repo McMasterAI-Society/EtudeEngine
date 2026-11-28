@@ -5,9 +5,9 @@ import bisect
 import statistics
 from collections import defaultdict
 
-from assessment.config import config as cfg
-from assessment.structure import in_windows
-from assessment.utils import median, number
+from assessment.performance import config as cfg
+from assessment.performance.structure import in_windows
+from assessment.common.utils import median, number
 
 
 def velocity_lookup(notes, midi_notes, *, by, tolerance):

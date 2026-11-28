@@ -1,7 +1,7 @@
 """Extract per-performance skill features from aligner output (and MIDI, for dynamics).
 
 Usage (from the repo root):
-    PYTHONPATH=src python -m assessment.cli.extract_features BATCH_DIR --outdir feature_output \
+    PYTHONPATH=src python -m assessment.performance.cli.extract_features BATCH_DIR --outdir feature_output \
         [--midi-dir data/majeppa] [--max-items 10] [--chord-audit]
 
 BATCH_DIR holds batch_summary.csv and one S_XXXX_P_XXXX folder per pair.
@@ -17,17 +17,17 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-from assessment.alignment import note_consistency, row_notes
-from assessment.config import config as cfg
-from assessment.features.chords import chord_metric
-from assessment.features.dynamics import dynamics_for_pair
-from assessment.features.pitch import pitch_metrics
-from assessment.features.timing import timing_metrics
-from assessment.ingest import MajeppaIngestor
-from assessment.io import read_csv, write_csv
-from assessment.structure import analyze_structure
-from assessment.utils import median, number
-from assessment.validity import build_state, choose_validity
+from assessment.performance.alignment import note_consistency, row_notes
+from assessment.performance import config as cfg
+from assessment.performance.features.chords import chord_metric
+from assessment.performance.features.dynamics import dynamics_for_pair
+from assessment.performance.features.pitch import pitch_metrics
+from assessment.performance.features.timing import timing_metrics
+from assessment.performance.ingest import MajeppaIngestor
+from assessment.common.io import read_csv, write_csv
+from assessment.performance.structure import analyze_structure
+from assessment.common.utils import median, number
+from assessment.performance.validity import build_state, choose_validity
 
 BASE_COLUMNS = ['score_id', 'performance_id', 'expertise_level', 'proficiency_group',
                 'matcher', 'alignment_status']
